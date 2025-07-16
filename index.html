@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usman Khan - Dance & Fitness Professional | Book Your Workshop</title>
+    <meta name="description" content="Transform your life with Usman Khan's premium dance & fitness workshops. 5000+ students trained. Book your workshop today!">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="photos/usmankhanMain1.JPG">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Usman Khan</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#workshops" class="nav-link">Workshops</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-video-container">
+            <video autoplay muted loop class="hero-video">
+                <source src="videos/Banner1Video.MP4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-text-bg"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text-col">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Transform Your Life</span><br>
+                    Through Dance & Fitness With Me
+                </h1>
+                <p class="hero-subtitle">Join my 5000+ students who have transformed their lives with my premium workshops. Let me help you unlock your best self!</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Students I've Trained</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label">Years of Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Cities I've Visited</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#workshops" class="btn btn-primary">Book Your Workshop With Me</a>
+                    <a href="#gallery" class="btn btn-secondary">Watch My Videos</a>
+                </div>
+            </div>
+            <div class="hero-side-promo">
+                <div class="promo-poster">
+                    <img src="photos/banglore17thdec.PNG" alt="Latest Workshop Poster">
+                    <div class="promo-badge">Book Fast! Slots Filling Up!</div>
+                    <div class="promo-timer" id="promoTimer">03:00:00</div>
+                    <a href="#contact" class="btn btn-primary promo-book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Bento Videos Section -->
+    <section class="bento-videos-section">
+        <div class="container">
+            <h2 class="section-heading">Step Into My World</h2>
+            <p class="section-subtitle">See the energy, joy, and passion of my workshops in action.</p>
+        </div>
+        <div class="container">
+            <div class="bento-grid" id="bentoVideosGrid"></div>
+        </div>
+    </section>
+
+    <!-- Inspiring Story Section -->
+    <section class="bento-story-section">
+      <div class="container bento-story-container">
+        <div class="bento-story-text">
+          <h2 class="bento-story-heading">From Corporate to Chasing My Passion</h2>
+          <p class="bento-story-para">
+            I left the comfort of a corporate job to follow my true calling—dance. Every step, every beat, every workshop is a celebration of happiness, freedom, and self-expression. My journey is proof that it’s never too late to choose joy and inspire others to do the same. Join me and let’s create something unforgettable together.
+          </p>
+        </div>
+        <div class="bento-story-image">
+          <img src="photos/usmankhanMain1.JPG" alt="Usman Khan Dancing" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Wall Section -->
+    <section class="reviews-wall-section">
+        <div class="reviews-wall-header">
+            <h2 class="reviews-wall-title">Loved by thousands of dancers</h2>
+            <p class="reviews-wall-subtitle">Here’s what my students and clients say about my workshops and sessions.</p>
+        </div>
+        <div class="reviews-wall-viewport">
+            <div class="reviews-wall-grid" id="reviewsWallGrid">
+                <!-- JS will inject review cards here -->
+            </div>
+        </div>
+    </section>
+    <!-- Workshops Section (dynamic, injected by JS) -->
+    <section id="workshops" class="workshops">
+      <div class="container">
+        <h2 class="section-heading">Book Your Spot: Upcoming Dance & Fitness Workshops</h2>
+        <p class="section-subtitle">Limited slots. Book now and experience real transformation!</p>
+        <div class="horizontal-workshops-list" id="workshopsList"></div>
+        <div class="workshops-cta bento-cta-container">
+          <div class="bento-cta-text">
+            <h3 class="bento-cta-heading">Ready to Transform Your Life?</h3>
+            <p class="bento-cta-para">
+              I walked away from a stable corporate career to follow my heart and live my passion for dance. Every workshop I lead is a chance to help others break free, find joy, and discover their own potential. If I can do it, so can you—let's take the first step together!
+            </p>
+            <a href="#contact" class="btn btn-primary btn-large">Book Your Workshop Now</a>
+          </div>
+          <div class="bento-cta-image">
+            <img src="photos/usmankhanMain2.JPG" alt="Usman Khan Inspiring" />
+          </div>
+        </div>
+      </div>
+      <div id="workshopModal" class="workshop-modal" style="display:none;">
+        <div class="workshop-modal-content" id="workshopModalContent"></div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-bento-section">
+      <div class="container services-bento-grid">
+        <div class="service-bento-card">
+          <div class="service-bento-icon"><i class="fas fa-music"></i></div>
+          <div class="service-bento-content">
+            <h3 class="service-bento-title">Dance Choreography</h3>
+            <p class="service-bento-desc">Custom choreography for weddings, events, and performances. Group & solo training.</p>
+          </div>
+        </div>
+        <div class="service-bento-card">
+          <div class="service-bento-icon"><i class="fas fa-dumbbell"></i></div>
+          <div class="service-bento-content">
+            <h3 class="service-bento-title">Zumba & Fitness</h3>
+            <p class="service-bento-desc">High-energy group sessions and private fitness training. Certified Zumba instructor.</p>
+          </div>
+        </div>
+        <div class="service-bento-card">
+          <div class="service-bento-icon"><i class="fas fa-trophy"></i></div>
+          <div class="service-bento-content">
+            <h3 class="service-bento-title">Dance Judging</h3>
+            <p class="service-bento-desc">Professional judging for competitions and events. Expert feedback and evaluation.</p>
+          </div>
+        </div>
+        <div class="service-bento-card">
+          <div class="service-bento-icon"><i class="fas fa-user-graduate"></i></div>
+          <div class="service-bento-content">
+            <h3 class="service-bento-title">Private Training</h3>
+            <p class="service-bento-desc">One-on-one sessions for personalized progress and flexible scheduling.</p>
+          </div>
+        </div>
+        <div class="service-bento-card">
+          <div class="service-bento-icon"><i class="fas fa-heartbeat"></i></div>
+          <div class="service-bento-content">
+            <h3 class="service-bento-title">Wellness & Motivation</h3>
+            <p class="service-bento-desc">Workshops focused on holistic wellness, motivation, and positive lifestyle change.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join the Movement Section -->
+    <section class="join-movement-section">
+      <div class="join-movement-container">
+        <div class="join-movement-content">
+          <div class="join-movement-text">
+            <h2 class="join-movement-title">Join the Movement</h2>
+            <p class="join-movement-description">
+              Be part of my vibrant Instagram community! I share regular updates, behind-the-scenes, dance tips, and exclusive content. Connect, get inspired, and grow with dancers and fitness lovers from all over India.
+            </p>
+            <a href="https://www.instagram.com/channel/AbYn7IgxQ_Vh0ZIF/?igsh=andoZ3prcmQ4dzRh" class="join-movement-cta" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i> Join My Instagram Community
+            </a>
+          </div>
+          <div class="join-movement-visual">
+            <div class="join-movement-card">
+              <div class="join-movement-card-icon"><i class="fas fa-video"></i></div>
+              <div class="join-movement-card-title">Behind the Scenes</div>
+              <div class="join-movement-card-description">See what goes on before the spotlight hits—raw, real, and inspiring moments from my journey.</div>
+            </div>
+            <div class="join-movement-card">
+              <div class="join-movement-card-icon"><i class="fas fa-bolt"></i></div>
+              <div class="join-movement-card-title">Live Workshop Moments</div>
+              <div class="join-movement-card-description">Catch the energy, excitement, and transformation happening in my live workshops across India.</div>
+            </div>
+            <div class="join-movement-card">
+              <div class="join-movement-card-icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="join-movement-card-title">Fitness & Motivation</div>
+              <div class="join-movement-card-description">Stay motivated with my fitness tips, routines, and motivational stories to keep you moving.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know before you join me</p>
+            </div>
+            <div class="faq-accordion" id="faqAccordion">
+                <!-- JS will inject FAQ items here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="premium-book-section">
+      <div class="premium-book-title">Book Your Workshop With Me</div>
+      <div class="premium-book-subtitle">Ready to transform your life? Let’s get started together.</div>
+      <div class="premium-book-grid">
+        <div class="premium-book-image">
+          <img src="photos/usmanwithoutbg.png" alt="Usman Khan" class="usman-large-img" />
+        </div>
+        <div class="premium-book-form-col">
+          <form class="premium-book-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="tel" placeholder="Your Phone" required />
+            <select required>
+              <option value="">Select Workshop</option>
+              <option value="zumba-dance">Zumba & Dance Workshop</option>
+              <option value="choreography">Dance Choreography Intensive</option>
+              <option value="fitness-dance">Fitness & Dance Fusion</option>
+              <option value="private">Private Training</option>
+              <option value="corporate">Corporate Event</option>
+            </select>
+            <input type="date" placeholder="dd/mm/yyyy" required />
+            <button type="submit">Book My Workshop</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="premium-footer">
+      <div class="footer-content">
+        <div class="footer-quick-links">
+          <span class="quick-links-title">Quick Links:</span>
+          <a href="#about" class="footer-link">My Story</a>
+          <a href="#workshops" class="footer-link">Workshops</a>
+          <a href="#services" class="footer-link">Services</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+        <span>Made with <span class="heartbeat">❤️</span> | Designed & Developed by 
+          <Yashwanth href="https://linktr.ee/yashwanthbharadwaj" target="_blank" rel="noopener" class="footer-link">Yashwanth Bharadwaj</a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Glasmorphic Floating Social Icons -->
+    <div class="floating-social-icons">
+      <a href="https://www.youtube.com/@UsmanK15" class="social-icon youtube" target="_blank" rel="noopener" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com/stay_fit_with_usmankhan?igshid=OGIzYTJhMTRmYQ%3D%3D&fbclid=PAZXh0bgNhZW0CMTEAAacr-SiJjpGHp4_2UAECYnIAFK44fghysuhLBym82pY2KIzdz-FOgPU9Ho1UIw_aem_1_2GN9_8ulVFDBoiveoTZg" class="social-icon instagram" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/919154425728" class="social-icon whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

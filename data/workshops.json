@@ -1,0 +1,258 @@
+{
+  "workshops": [
+    {
+      "id": "bangalore-zumba",
+      "title": "Zumba & Dance Workshop",
+      "location": "Bangalore",
+      "date": "2024-12-17",
+      "time": "17:00",
+      "description": "High-energy session combining Zumba fitness with dance choreography. Perfect for all skill levels.",
+      "image": "photos/banglore17thdec.PNG",
+      "features": [
+        "Group Session",
+        "2 Hours",
+        "All Levels"
+      ],
+      "price": 2500,
+      "originalPrice": 3500,
+      "featured": true,
+      "badge": "Most Popular",
+      "available": true
+    },
+    {
+      "id": "chennai-choreography",
+      "title": "Dance Choreography Intensive",
+      "location": "Chennai",
+      "date": "2024-07-21",
+      "time": "16:00",
+      "description": "Advanced choreography techniques for wedding performances and corporate events.",
+      "image": "photos/chennai21stjuly.PNG",
+      "features": [
+        "Private Available",
+        "3 Hours",
+        "Intermediate+"
+      ],
+      "price": 3000,
+      "originalPrice": 4000,
+      "featured": false,
+      "badge": null,
+      "available": true
+    },
+    {
+      "id": "hyderabad-fitness",
+      "title": "Fitness & Dance Fusion",
+      "location": "Hyderabad",
+      "date": "2024-07-27",
+      "time": "18:00",
+      "description": "Unique blend of cardio fitness and dance moves for maximum results.",
+      "image": "photos/hyd27thjuly.PNG",
+      "features": [
+        "Group Session",
+        "2.5 Hours",
+        "All Levels"
+      ],
+      "price": 2800,
+      "originalPrice": 3500,
+      "featured": false,
+      "badge": null,
+      "available": true
+    },
+    {
+      "id": "kolkata-zumba",
+      "title": "Zumba & Dance Workshop",
+      "location": "Kolkata",
+      "date": "2025-06-02",
+      "time": "15:00",
+      "description": "Energetic Zumba session with Bollywood dance elements for all fitness levels.",
+      "image": "photos/kolkata2ndjune.JPG",
+      "features": [
+        "Group Session",
+        "2 Hours",
+        "All Levels"
+      ],
+      "price": 2200,
+      "originalPrice": null,
+      "featured": false,
+      "badge": null,
+      "available": true
+    },
+    {
+      "id": "kolkata-july19-tumsemilkedilka",
+      "title": "Tumse Milke Dilka - Dance Workshop",
+      "location": "Kolkata (226b Dance Studio)",
+      "date": "2025-07-19",
+      "time": "17:00",
+      "description": "Join me, Usman, for an energetic dance workshop in Kolkata! Let's groove together to 'Tumse Milke Dilka' and make unforgettable memories. All levels!",
+      "image": "photos/kolkata19thjuly.jpeg",
+      "features": [
+        "Group Session",
+        "2 Hours",
+        "All Levels"
+      ],
+      "price": 650,
+      "originalPrice": null,
+      "featured": true,
+      "badge": "Active Now",
+      "available": true
+    },
+    {
+      "id": "hyderabad-regular",
+      "title": "Regular Dance & Fitness Classes",
+      "location": "Hyderabad (Vibe Studio)",
+      "date": null,
+      "time": null,
+      "recurring": "Mon, Wed, Fri",
+      "description": "Weekly classes for consistent fitness and dance training.",
+      "image": "photos/monwedfriVibestudio.PNG",
+      "features": [
+        "Weekly Classes",
+        "2 Hour",
+        "All Levels",
+        "12 Classes",
+        "8pm - "
+      ],
+      "price": 2800,
+      "originalPrice": 4000,
+      "featured": false,
+      "badge": "Regular Classes",
+      "available": true
+    }
+  ],
+  "upcomingWorkshops": [
+    {
+      "id": "mumbai-premium",
+      "title": "Premium Dance Workshop",
+      "location": "Mumbai",
+      "date": "2024-01-15",
+      "time": "14:00",
+      "description": "Exclusive premium workshop with advanced choreography and performance training.",
+      "image": "photos/usmankhanMain2.JPG",
+      "features": [
+        "Limited Seats",
+        "4 Hours",
+        "Advanced Level"
+      ],
+      "price": 5000,
+      "originalPrice": 6000,
+      "featured": true,
+      "badge": "Coming Soon",
+      "available": false
+    },
+    {
+      "id": "delhi-zumba",
+      "title": "Zumba & Dance Workshop",
+      "location": "Delhi",
+      "date": "2024-08-01",
+      "time": "16:00",
+      "description": "Energetic Zumba session with Bollywood dance elements for all fitness levels.",
+      "image": "photos/hyd27thjuly.PNG",
+      "features": [
+        "Group Session",
+        "2 Hours",
+        "All Levels"
+      ],
+      "price": 2500,
+      "originalPrice": 3000,
+      "featured": false,
+      "badge": null,
+      "available": true
+    }
+  ],
+  "services": [
+    {
+      "id": "dance-choreography",
+      "title": "Dance Choreography",
+      "description": "Wedding Sangeet, Corporate Events, Private Performances",
+      "icon": "fas fa-music",
+      "features": [
+        "Custom choreography",
+        "Group & individual training",
+        "Performance preparation"
+      ],
+      "price": "Custom Quote"
+    },
+    {
+      "id": "zumba-fitness",
+      "title": "Zumba & Fitness",
+      "description": "High-energy group sessions and private fitness training",
+      "icon": "fas fa-dumbbell",
+      "features": [
+        "Certified Zumba instructor",
+        "Cardio & strength training",
+        "Weight loss programs"
+      ],
+      "price": "₹800/session"
+    },
+    {
+      "id": "dance-judging",
+      "title": "Dance Judging",
+      "description": "Professional judging for competitions and events",
+      "icon": "fas fa-trophy",
+      "features": [
+        "Competition judging",
+        "Performance evaluation",
+        "Expert feedback"
+      ],
+      "price": "Custom Quote"
+    },
+    {
+      "id": "private-training",
+      "title": "Private Training",
+      "description": "One-on-one sessions for personalized attention",
+      "icon": "fas fa-user-graduate",
+      "features": [
+        "Personalized programs",
+        "Flexible scheduling",
+        "Progress tracking"
+      ],
+      "price": "₹1500/session"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Priya Sharma",
+      "location": "Bangalore",
+      "text": "Usman's workshop completely transformed my approach to fitness. His energy is infectious and the choreography was amazing!",
+      "rating": 5,
+      "workshop": "Zumba & Dance Workshop"
+    },
+    {
+      "id": 2,
+      "name": "Rahul Patel",
+      "location": "Chennai",
+      "text": "The choreography workshop was incredible. I learned so much and the wedding performance was a huge success!",
+      "rating": 5,
+      "workshop": "Dance Choreography Intensive"
+    },
+    {
+      "id": 3,
+      "name": "Anjali Desai",
+      "location": "Hyderabad",
+      "text": "Best fitness experience ever! Usman's fusion of dance and fitness is unique and highly effective.",
+      "rating": 5,
+      "workshop": "Fitness & Dance Fusion"
+    }
+  ],
+  "stats": {
+    "studentsTrained": 5000,
+    "yearsExperience": 7,
+    "citiesCovered": 50,
+    "workshopsConducted": 200
+  },
+  "contact": {
+    "phone": "+91 98765 43210",
+    "email": "usman@dancefitness.com",
+    "location": "Hyderabad, India",
+    "social": {
+      "instagram_personal": "https://www.instagram.com/usmank15/",
+      "instagram_business": "https://www.instagram.com/stay_fit_with_usmankhan",
+      "youtube": "https://www.youtube.com/@UsmanK15"
+    }
+  }
+
+  
+} 
+
+
+

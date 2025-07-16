@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Test - Usman Khan Workshops</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .timer-display {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .workshop-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #667eea;
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Workshop Timer Test</h1>
+        <p>This page tests the countdown timers for upcoming workshops in 2025:</p>
+        
+        <div class="workshop-info">
+            <h3>Kolkata Workshop</h3>
+            <p><strong>Date:</strong> June 2, 2025 at 15:00</p>
+            <div class="timer-display" id="kolkata-timer">Loading...</div>
+        </div>
+        
+        <div class="workshop-info">
+            <h3>Chennai Workshop</h3>
+            <p><strong>Date:</strong> July 21, 2025 at 16:00</p>
+            <div class="timer-display" id="chennai-timer">Loading...</div>
+        </div>
+        
+        <div class="workshop-info">
+            <h3>Hyderabad Workshop</h3>
+            <p><strong>Date:</strong> July 27, 2025 at 18:00</p>
+            <div class="timer-display" id="hyderabad-timer">Loading...</div>
+        </div>
+        
+        <div class="workshop-info">
+            <h3>Bangalore Workshop</h3>
+            <p><strong>Date:</strong> December 17, 2025 at 17:00</p>
+            <div class="timer-display" id="bangalore-timer">Loading...</div>
+        </div>
+    </div>
+
+    <script>
+        // Test timer function
+        function startTestTimer(timerElement, targetDate) {
+            function updateTimer() {
+                const now = new Date();
+                let diff = targetDate - now;
+                
+                if (diff <= 0) {
+                    timerElement.textContent = 'Starting Now!';
+                    timerElement.style.background = '#ff6b6b';
+                    return;
+                }
+                
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                const seconds = Math.floor((diff / 1000) % 60);
+                
+                timerElement.textContent = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+                
+                // Update every second
+                setTimeout(updateTimer, 1000);
+            }
+            
+            updateTimer();
+        }
+
+        // Start timers for each workshop
+        document.addEventListener('DOMContentLoaded', function() {
+            const workshops = [
+                { id: 'kolkata-timer', date: '2025-06-02T15:00:00' },
+                { id: 'chennai-timer', date: '2025-07-21T16:00:00' },
+                { id: 'hyderabad-timer', date: '2025-07-27T18:00:00' },
+                { id: 'bangalore-timer', date: '2025-12-17T17:00:00' }
+            ];
+
+            workshops.forEach(workshop => {
+                const timerElement = document.getElementById(workshop.id);
+                const targetDate = new Date(workshop.date);
+                startTestTimer(timerElement, targetDate);
+            });
+        });
+    </script>
+</body>
+</html> 
