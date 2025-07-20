@@ -185,6 +185,38 @@
   .premium-book-subtitle {
     font-size: 0.98rem;
   }
+
+  .premium-book-form input,
+  .premium-book-form select {
+    font-size: 1rem;
+    padding: 16px 18px;
+  }
+
+  .premium-book-btn {
+    font-size: 1rem;
+    padding: 14px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .premium-book-title {
+    font-size: 1.1rem;
+  }
+  
+  .premium-book-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .premium-book-form input,
+  .premium-book-form select {
+    font-size: 0.95rem;
+    padding: 14px 16px;
+  }
+
+  .premium-book-btn {
+    font-size: 0.95rem;
+    padding: 12px 0;
+  }
 } 
 
 /* Premium Footer Styles */

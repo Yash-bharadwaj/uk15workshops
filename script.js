@@ -5,6 +5,22 @@ const navMenu = document.querySelector('.nav-menu');
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 });
 
 // Close mobile menu when clicking on a link
@@ -717,7 +733,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Workshops Data Loading and Rendering
 async function loadWorkshopsData() {
   try {
-    const response = await fetch('data/workshops.json');
+    const response = await fetch('data/workshops.json?t=' + Date.now());
     const data = await response.json();
     return data;
   } catch (error) {
@@ -780,6 +796,51 @@ async function loadWorkshopsData() {
           image: "photos/kolkata2ndjune.JPG",
           features: ["Group Session", "2 Hours", "All Levels"],
           price: 2200,
+          originalPrice: null,
+          featured: false,
+          badge: null,
+          available: true
+        },
+        {
+          id: "kolkata-july19-tumsemilkedilka",
+          title: "Tumse Milke Dilka - Dance Workshop",
+          location: "Kolkata (226b Dance Studio)",
+          date: "2025-07-19",
+          time: "17:00",
+          description: "Join me, Usman, for an energetic dance workshop in Kolkata! Let's groove together to 'Tumse Milke Dilka' and make unforgettable memories. All levels!",
+          image: "photos/kolkata19thjuly.jpeg",
+          features: ["Group Session", "2 Hours", "All Levels"],
+          price: 650,
+          originalPrice: null,
+          featured: true,
+          badge: "Active Now",
+          available: true
+        },
+        {
+          id: "hyderabad-august2-vibe",
+          title: "Dance Workshop - Vibe Studio",
+          location: "Hyderabad (Vibe Studio)",
+          date: "2025-08-02",
+          time: "17:00",
+          description: "Join me for an exciting dance session at Vibe Studio! Let's create amazing energy together with high-energy moves and great music.",
+          image: "photos/August2ndHyd.jpeg",
+          features: ["Group Session", "2 Hours", "All Levels"],
+          price: 800,
+          originalPrice: null,
+          featured: true,
+          badge: "Active Now",
+          available: true
+        },
+        {
+          id: "kolkata-july26-226b",
+          title: "Dance Workshop - Studio 226B",
+          location: "Kolkata (Studio 226B)",
+          date: "2025-07-26",
+          time: "17:00",
+          description: "Join me for a fun-filled dance workshop at Studio 226B! Perfect for all skill levels looking to learn and have a great time.",
+          image: "photos/july26thkol.jpeg",
+          features: ["Group Session", "1 Hour", "All Levels"],
+          price: 500,
           originalPrice: null,
           featured: false,
           badge: null,

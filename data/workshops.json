@@ -96,6 +96,44 @@
       "available": true
     },
     {
+      "id": "hyderabad-august2-vibe",
+      "title": "Dance Workshop - Vibe Studio",
+      "location": "Hyderabad (Vibe Studio)",
+      "date": "2025-08-02",
+      "time": "17:00",
+      "description": "Join me for an exciting dance session at Vibe Studio! Let's create amazing energy together with high-energy moves and great music.",
+      "image": "photos/August2ndHyd.jpeg",
+      "features": [
+        "Group Session",
+        "2 Hours",
+        "All Levels"
+      ],
+      "price": 800,
+      "originalPrice": null,
+      "featured": true,
+      "badge": "Active Now",
+      "available": true
+    },
+    {
+      "id": "kolkata-july26-226b",
+      "title": "Dance Workshop - Studio 226B",
+      "location": "Kolkata (Studio 226B)",
+      "date": "2025-07-26",
+      "time": "17:00",
+      "description": "Join me for a fun-filled dance workshop at Studio 226B! Perfect for all skill levels looking to learn and have a great time.",
+      "image": "photos/july26thkol.jpeg",
+      "features": [
+        "Group Session",
+        "1 Hour",
+        "All Levels"
+      ],
+      "price": 500,
+      "originalPrice": null,
+      "featured": false,
+      "badge": null,
+      "available": true
+    },
+    {
       "id": "hyderabad-regular",
       "title": "Regular Dance & Fitness Classes",
       "location": "Hyderabad (Vibe Studio)",
@@ -106,7 +144,7 @@
       "image": "photos/monwedfriVibestudio.PNG",
       "features": [
         "Weekly Classes",
-        "2 Hour",
+        "1 Hour",
         "All Levels",
         "12 Classes",
         "8pm - "
