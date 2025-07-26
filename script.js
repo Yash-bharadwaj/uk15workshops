@@ -98,10 +98,10 @@ function rotateHeroVideo() {
 // Rotate video every 30 seconds
 setInterval(rotateHeroVideo, 30000);
 
-// Workshop booking form handling
-const bookingForm = document.getElementById('bookingForm');
-if (bookingForm) {
-    bookingForm.addEventListener('submit', function(e) {
+// Contact form handling
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         // Get form data
@@ -109,7 +109,7 @@ if (bookingForm) {
         const data = Object.fromEntries(formData);
         
         // Show success message
-        showNotification('Thank you! We will contact you soon to confirm your workshop booking.', 'success');
+        showNotification('Thank you! I will get back to you soon with a response.', 'success');
         
         // Reset form
         this.reset();
@@ -523,26 +523,58 @@ document.addEventListener('DOMContentLoaded', () => {
             'videos/Banner12Video.MP4',
             'videos/Banner13Video.MP4'
         ];
-        // Shuffle and duplicate for infinite effect
-        let allVideos = videoFiles.concat(videoFiles);
-        allVideos.forEach((src, i) => {
+        
+        const imageFiles = [
+            'photos/1.png',
+            'photos/2.png',
+            'photos/3.png',
+            'photos/4.png',
+            'photos/5.png',
+            'photos/6.png',
+            'photos/7.png'
+        ];
+        
+        // Combine videos and images
+        let allMedia = [...videoFiles, ...imageFiles];
+        
+        // Shuffle the combined array to mix videos and images
+        allMedia = shuffle(allMedia);
+        
+        // Duplicate for infinite effect
+        allMedia = allMedia.concat(allMedia);
+        
+        allMedia.forEach((src, i) => {
             const div = document.createElement('div');
             div.className = 'bento-video';
+            
             // Randomly assign bento size classes for 2-row bento effect
             if (i % 7 === 0) div.classList.add('large');
             else if (i % 5 === 0) div.classList.add('tall');
             else if (i % 4 === 0) div.classList.add('wide');
-            const vid = document.createElement('video');
-            vid.src = src;
-            vid.autoplay = true;
-            vid.muted = true;
-            vid.loop = true;
-            vid.playsInline = true;
-            vid.setAttribute('tabindex', '0');
-            // Hover play/pause
-            div.addEventListener('mouseenter', () => vid.play());
-            div.addEventListener('mouseleave', () => vid.pause());
-            div.appendChild(vid);
+            
+            // Check if it's a video or image based on file extension
+            const isVideo = src.toLowerCase().includes('.mp4') || src.toLowerCase().includes('.mov');
+            
+            if (isVideo) {
+                const vid = document.createElement('video');
+                vid.src = src;
+                vid.autoplay = true;
+                vid.muted = true;
+                vid.loop = true;
+                vid.playsInline = true;
+                vid.setAttribute('tabindex', '0');
+                // Hover play/pause
+                div.addEventListener('mouseenter', () => vid.play());
+                div.addEventListener('mouseleave', () => vid.pause());
+                div.appendChild(vid);
+            } else {
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = 'Workshop Moment';
+                img.setAttribute('tabindex', '0');
+                div.appendChild(img);
+            }
+            
             bentoGrid.appendChild(div);
         });
     }
@@ -1109,7 +1141,7 @@ function createWorkshopRow(ws, idx, list) {
       </div>
       <div class="workshop-row-actions">
         <button class="workshop-row-view" data-idx="${idx}">View Details</button>
-        ${(isRecurring && ws.price === 2800) ? `<a href="https://rzp.io/rzp/8oscG42" class="workshop-row-book" target="_blank">Book Now</a>` : (isUpcoming && ws.price === 650) ? `<a href="https://rzp.io/rzp/DFUtD7mS" class="workshop-row-book" target="_blank">Book Now</a>` : (isRecurring || isUpcoming) ? `<a href="#contact" class="workshop-row-book">Book Now</a>` : ''}
+        ${(isRecurring && ws.price === 2800) ? `<a href="https://rzp.io/rzp/8oscG42" class="workshop-row-book" target="_blank">Book Now</a>` : (isUpcoming && ws.price === 650) ? `<a href="https://rzp.io/rzp/DFUtD7mS" class="workshop-row-book" target="_blank">Book Now</a>` : (isUpcoming && ws.id === "hyderabad-august2-vibe") ? `<a href="https://rzp.io/rzp/VUgHTUbR" class="workshop-row-book" target="_blank">Book Now</a>` : (isRecurring || isUpcoming) ? `<a href="#contact" class="workshop-row-book">Book Now</a>` : ''}
       </div>
     `;
     list.appendChild(row);
